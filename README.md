@@ -4,7 +4,8 @@
 I always waste a lot of time using snipping tool on windows and wanted something simple and easy. Pictic is a very simple screenshot utility that lets you upload to IPFS by using remote nodes or local node or even to your clipboard.
 
 ## Screenshots
-![IndexPage](https://i.imgur.com/YylP1Pg.png =200x) ![SettingsPage](https://i.imgur.com/V5k7YgX.png =200x) ![About](https://i.imgur.com/moe80FQ.png =200x)
+<img src="https://i.imgur.com/YylP1Pg.png" width="200"> <img src="https://i.imgur.com/V5k7YgX.png" width="200"> <img src="https://i.imgur.com/moe80FQ.png" width="200">
+
 
 
 ## Installing
