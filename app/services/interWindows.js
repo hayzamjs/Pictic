@@ -1,0 +1,3 @@
+/* Thanks philip */
+
+module.exports = {}

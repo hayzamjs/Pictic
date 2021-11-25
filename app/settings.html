@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/tailwind.min.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        window.$ = window.jQuery = require('./js/jquery.min.js');
+    </script>
+     <script src="./js/settings.js"></script>
+</head>
+
+<body class="bg-white font-family-karla h-screen">
+    
+    <div id="titlebar">
+        <span id="titlebar-title">
+            <img src="../assets/logo-32x32.png" class="image-title" width="25px">
+        </span>
+        <header>
+            <div class="titlebar-btn-option" id="titlebar-btn-close">x</div>
+            <div class="titlebar-btn-option" id="titlebar-btn-minimize">-</div>         
+        </header>               
+    </div>
+
+    <div class="w-full flex flex-wrap">
+        <div class="w-full flex flex-col">
+            <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
+                <div class="pt-12 pb-12 text-center">
+                    <div class="p-3">
+                        <h1 id="title1" class="text-2xl font-normal leading-normal mt-0 mb-2 text-pink-800">
+                            Settings ⚙️
+                        </h1>
+                    </div>
+
+                    <h1 id="nameTitle" class="text-2xl font-normal leading-normal mt-0 mb-2 text-pink-800"></h1>
+                    <button id="gotoDashboard" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        Dashboard
+                    </button>
+                    <button id="gotoAbout" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        About
+                    </button>
+                </div>
+                <div class="pt-12 pb-12 text-center">
+
+                    <div class="p-3">
+                        <label for="defaultLocation">Default Upload Location</label>
+                        <select name="defaultLocation" id="defaultLocation" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            <option value="scalaIpfs">Remote IPFS Node</option>
+                            <option value="localIpfs">Local IPFS Node (localhost:5001)</option>
+                            <option value="clipBoard">Clipboard</option>
+                          </select>
+                    </div>
+
+                    <div class="p-8">
+                        <button id="applySettings" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            Apply Settings
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

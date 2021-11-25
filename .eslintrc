@@ -1,0 +1,4 @@
+{
+    "ignorePatterns": ["out/*", "app/js/*.min.js"],
+    "extends": ["standard","plugin:eqeqeq-fix/recommended"]
+}

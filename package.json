@@ -1,0 +1,78 @@
+{
+  "name": "pictic",
+  "productName": "Pictic",
+  "version": "0.9.0",
+  "description": "A simplistic screen shot utility",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/hayzamjs/pictic",
+  "keywords": [
+    "IPFS",
+    "clipboard",
+    "screenshot",
+    "screenshots",
+    "electron"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-wix": "*",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron": "^16.0.0",
+    "eslint": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-eqeqeq-fix": "^1.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "exe-icon-extractor": "^1.0.8"
+  },
+  "dependencies": {
+    "electron-fetch": "^1.7.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "ipfs-http-client": "^54.0.0",
+    "jimp": "^0.16.1",
+    "nedb-promises": "^5.0.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./assets/win-icon.ico",
+        "extraResource": "assets"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-wix",
+          "config": {
+            "ui": {
+              "chooseDirectory": true
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "win32",
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
