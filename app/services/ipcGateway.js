@@ -2,7 +2,7 @@ const { ipcMain, BrowserWindow } = require('electron')
 const interWindows = require('./interWindows')
 const { uploadFile } = require('./upload')
 const { DB } = require('./db')
-const { showSuccess } = require('./notifications')
+const { showSuccess, showMessage } = require('./notifications')
 const { updateUploadLocation } = require('./config')
 
 const dataStore = new DB()
@@ -46,7 +46,7 @@ exports.init = () => {
   ipcMain.handle('close-window', () => {
     const window = BrowserWindow.getFocusedWindow()
     window.close()
-    showSuccess('Pictic is now minimized to the tray.')
+    showMessage('Pictic is now minimized to the tray.')
   })
 
   ipcMain.handle('minimize-window', () => {

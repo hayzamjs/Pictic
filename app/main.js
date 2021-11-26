@@ -9,6 +9,7 @@ const os = require('os')
 const path = require('path')
 const interWindows = require('./services/interWindows')
 const ipcGateway = require('./services/ipcGateway')
+let tray = null
 
 function startUp (minimize, page) {
   try {
@@ -46,11 +47,11 @@ function startUp (minimize, page) {
 }
 
 function setupTray () {
-  const trayIcon = (app.isPackaged === false)
+  let trayIcon = (app.isPackaged === false)
     ? path.join(__dirname, '../assets/logo-32x32.png')
     : path.join(process.resourcesPath, ('assets/logo-32x32.png'))
 
-  const tray = new Tray(trayIcon)
+  tray = new Tray(trayIcon)
   const template = [
     {
       type: 'separator'
